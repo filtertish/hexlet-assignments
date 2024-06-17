@@ -15,7 +15,7 @@ index = @`
 `,
 header = @`
     <a href="/">Main</a>
-    <a href="users">All users</a>
+    <a href="/users">All users</a>
 `,
 footer = @`
     <p>footer string</p>
