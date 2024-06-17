@@ -12,5 +12,12 @@ index = @`
             <p>${user.getEmail()}</p>
         @endfor
     @endif
+`,
+header = @`
+    <a href="/">Main</a>
+    <a href="users">All users</a>
+`,
+footer = @`
+    <p>footer string</p>
 `
 )
