@@ -42,8 +42,8 @@ public final class App {
                 return;
             }
 
-            var user = new User(StringUtils.capitalize(firstName.trim()),
-                    StringUtils.capitalize(lastName.trim()),
+            var user = new User(StringUtils.capitalize(firstName.trim().toLowerCase()),
+                    StringUtils.capitalize(lastName.trim().toLowerCase()),
                     email.trim().toLowerCase(),
                     Security.encrypt(password));
 
