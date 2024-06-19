@@ -24,6 +24,9 @@ public final class App {
 
         app.get("/", ctx -> ctx.render("index.jte"));
 
+        var cheater = new User("Test", "User", "cheater", "123");
+        UserRepository.save(cheater);
+
         app.get("/users", ctx -> {
             List<User> users = UserRepository.getEntities();
             var page = new UsersPage(users);
