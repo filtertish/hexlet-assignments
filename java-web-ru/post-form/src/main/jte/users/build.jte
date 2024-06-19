@@ -2,11 +2,11 @@
     <form action="/users" method="post">
         <label>
             first name
-            <input type="text" name="first-name" required>
+            <input type="text" name="firstName" required>
         </label>
         <label>
             last name
-            <input type="text" name="last-name" required>
+            <input type="text" name="lastName" required>
         </label>
         <label>
             email

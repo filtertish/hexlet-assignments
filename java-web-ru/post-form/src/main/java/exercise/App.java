@@ -24,9 +24,6 @@ public final class App {
 
         app.get("/", ctx -> ctx.render("index.jte"));
 
-        var cheater = new User("Test", "User", "cheater", "123");
-        UserRepository.save(cheater);
-
         app.get("/users", ctx -> {
             List<User> users = UserRepository.getEntities();
             var page = new UsersPage(users);
@@ -35,8 +32,8 @@ public final class App {
 
         // BEGIN
         app.post("users", ctx -> {
-            var firstName = ctx.formParam("first-name");
-            var lastName = ctx.formParam("last-name");
+            var firstName = ctx.formParam("firstName");
+            var lastName = ctx.formParam("lastName");
             var email = ctx.formParam("email");
             var password = ctx.formParam("password");
 
