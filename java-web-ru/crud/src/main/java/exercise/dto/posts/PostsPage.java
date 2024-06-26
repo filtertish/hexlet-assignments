@@ -6,7 +6,7 @@ import exercise.model.Post;
 
 
 // BEGIN
-public record PostsPage(List<Post> posts, int page, int max) {
+public record PostsPage(List<Post> posts, int page) {
 }
 // END
 

@@ -14,11 +14,7 @@
                 </li>
             @endfor
         </ul>
-        @if(page.page() > 1)
-            <a href="${NamedRoutes.postsPath(page.page() - 1)}">previous</a>
-        @endif
-        @if(page.page() * 5 < page.max() - 5)
-            <a href="${NamedRoutes.postsPath(page.page() + 1)}">next</a>
-        @endif
+        <a href="${NamedRoutes.postsPath(page.page() - 1 > 0 ? page.page() - 1 : 1)}">previous</a>
+        <a href="${NamedRoutes.postsPath(page.posts().size() < 5 ? page.page() : page.page() + 1)}">next</a>
     @endif
 `)

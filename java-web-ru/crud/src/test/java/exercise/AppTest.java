@@ -42,7 +42,7 @@ class AppTest {
         assertThat(body).contains("Sleep the Brave");
         assertThat(body).contains("This Side of Paradise");
         assertThat(body).doesNotContain("Little Hands Clapping");
-        assertThat(body).contains("?posts=2");
+        assertThat(body).contains("?page=2");
     }
 
     @Test
@@ -55,8 +55,8 @@ class AppTest {
         assertThat(body).contains("Moab Is My Washpot");
         assertThat(body).doesNotContain("This Side of Paradise");
         assertThat(body).doesNotContain("To Say Nothing of the Dog");
-        assertThat(body).contains("?posts=1");
-        assertThat(body).contains("?posts=3");
+        assertThat(body).contains("?page=1");
+        assertThat(body).contains("?page=3");
     }
 
     @Test

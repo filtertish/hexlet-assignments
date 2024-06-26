@@ -13,14 +13,12 @@ public class PostsController {
 
     // BEGIN
     public static void index(Context ctx) {
-        var posts = PostRepository.getEntities();
-
         var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
         if (page < 1) page = 1;
-        if (page > posts.size() / 5) page = posts.size() / 5;
+        var posts = PostRepository.findAll(page, 5);
 
         ctx.render("posts/index.jte", model("page",
-                new PostsPage(posts.subList((page - 1) * 5, page * 5), page, posts.size())));
+                new PostsPage(posts, page)));
     }
 
     public static void show(Context ctx) {
