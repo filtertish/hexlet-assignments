@@ -47,7 +47,7 @@ class AppTest {
 
     @Test
     void testListArticles2() throws Exception {
-        HttpResponse<String> response = Unirest.get(baseUrl + "/posts?posts=2").asString();
+        HttpResponse<String> response = Unirest.get(baseUrl + "/posts?page=2").asString();
         String body = response.getBody();
 
         assertThat(response.getStatus()).isEqualTo(200);
